@@ -1,0 +1,11 @@
+.page {
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: $max-width;
+  width: $width;
+  padding: $padding;
+  background-color: $bg-color;
+  @include flex ();
+  font-family: $font-family;
+  @include fontkit ();
+}

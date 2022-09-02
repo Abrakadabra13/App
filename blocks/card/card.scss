@@ -1,0 +1,87 @@
+.card {
+  @include card ();
+  padding: 40px;
+  box-sizing: border-box;
+
+  @include large () {
+    width: 349px;
+    height: 284px;
+    padding: 30px;
+  }
+
+  @include small () {
+    width: 300px;
+    height: 284px;
+    padding: 20px;
+  }
+
+  &__name {
+    margin: $null;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    opacity: 60%;
+    padding-bottom: 20px;
+
+    @include tablet_and_mobile () {
+      font-size: 15px;
+      line-height: 20px;
+      padding-bottom: 12px;
+    }
+  }
+
+  &__title {
+    margin: $null;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    padding-bottom: 40px;
+    min-height: 74px;
+
+    @include tablet_and_mobile () {
+      font-size: 26px;
+      line-height: 31.5px;
+      padding-bottom: 50px;
+      min-height: 62px;
+    }
+  }
+
+  &__title_mini {
+    @include large {
+      padding-bottom: 19px;
+    }
+  }
+
+  &__text {
+    margin: $null;
+    font-family: $font-family;
+    @include normalfont ();
+    opacity: 60%;
+
+    @include tablet_and_mobile () {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  &__previous {
+    @include mobile () {
+      display: $none;
+    }
+  }
+
+  &__next {
+    @include mobile () {
+      display: $none;
+    }
+  }
+
+  &_active {
+    @include mobile () {
+      display: block;
+      cursor: pointer;
+    }
+  }
+}

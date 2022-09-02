@@ -1,0 +1,75 @@
+.cards {
+  max-width: $max-width;
+  width: $width;
+  display: flex;
+  gap: 20px;
+  padding-left: 170px;
+  padding-right: 170px;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+  align-items: center;
+
+  @include large () {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+    gap: 10px;
+  }
+
+  @include tablet () {
+    padding: $null;
+    padding-bottom: 70px;
+    flex-direction: column;
+  }
+
+  @include mobile () {
+    padding: $null;
+    padding-bottom: 82px;
+    flex-direction: column;
+  }
+
+  &__buttons {
+    height: 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    display: $none;
+
+    @include large () {
+      display: $none;
+    }
+
+    @include tablet () {
+      display: $none;
+    }
+
+    @include mobile () {
+      display: block;
+    }
+  }
+
+  &__button_left {
+    width: 4px;
+    height: 4px;
+    padding: $null;
+    margin: $null;
+    border: $none;
+    background-image: url("../../images/gray.svg");
+    cursor: pointer;
+  }
+
+  &__button_right {
+    width: 4px;
+    height: 4px;
+    padding: $null;
+    margin: $null;
+    border: $none;
+    background-image: url("../../images/gray.svg");
+    cursor: pointer;
+  }
+
+  &__button_active {
+
+    background-image: url("../../images/black.svg");
+  }
+}

@@ -1,0 +1,148 @@
+.header {
+  @include footer-header ();
+  padding-top: 30px;
+  padding-left: 160px;
+  height: 640px;
+  margin-bottom: 60px;
+
+  @include large () {
+    padding-left: 50px;
+    margin-bottom: 70px;
+    height: 602px;
+  }
+
+  @include small () {
+    height: 898px;
+    padding-top: 20px;
+    margin-bottom: 70px;
+    min-width: 300px;
+    display: grid;
+    justify-content: center;
+    grid-template-areas:
+    "logo"
+    "title"
+    "text"
+    "img"
+    "button";
+  }
+
+  &__logo {
+    width: 40px;
+    min-height: 40px;
+    background-color: $bg-color;
+    border-radius: 50%;
+    @include flex ();
+    align-items: center;
+    grid-area: logo;
+
+    @include small () {
+      margin-left: -10px;
+    }
+  }
+
+  &__img {
+    width: 30.74px;
+    height: 31.66px;
+  }
+
+  &__title {
+    @include title ();
+    width: 650px;
+    padding-top: 60px;
+    padding-bottom: 28px;
+    grid-area: title;
+
+    @include large () {
+      font-size: 30px;
+      line-height: 37px;
+      width: 360px;
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+
+    @include small () {
+      font-size: 24px;
+      line-height: 29px;
+      width: 260px;
+      padding-top: 50px;
+      padding-bottom: 14px;
+      margin-left: -10px;
+    }
+  }
+
+  &__text {
+    @include title ();
+    opacity: 70%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    width: 450px;
+    padding-bottom: 108px;
+    grid-area: text;
+
+    @include large () {
+      font-size: 15px;
+      line-height: 20px;
+      width: 360px;
+      padding-bottom: 250px;
+    }
+
+    @include small () {
+      font-size: 12px;
+      line-height: 14.5px;
+      width: 260px;
+      padding-bottom: 50px;
+      margin-left: -10px;
+    }
+  }
+
+  &__image {
+    width: 471px;
+    height: 764px;
+    position: relative;
+    bottom: 517px;
+    left: 650px;
+    grid-area: img;
+
+    @include large () {
+      width: 377px;
+      height: 611px;
+      bottom: 475px;
+      left: 340px;
+    }
+
+    @include small () {
+      width: 400px;
+      height: 620px;
+      top: -40px;
+      left: -80px;
+    }
+
+  }
+
+  &__button {
+    @include button ();
+    background-color: $bg-color;
+    width: 240px;
+    grid-area: button;
+    min-height: 54px;
+
+    &:hover {
+      opacity: 93%;
+      cursor: pointer;
+    }
+
+    @include large () {
+      min-height: 48px;
+      font-size: 14px;
+    }
+
+    @include small () {
+      width: 260px;
+      min-height: 44px;
+      position: relative;
+      bottom: 46px;
+      margin-left: -10px;
+    }
+  }
+}

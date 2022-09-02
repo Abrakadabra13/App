@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>App</title>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+        <div class="header__logo">
+          <img class="header__img" src="./images/logo.svg" alt="Лого">
+        </div>
+        <h1 class="header__title">Не умеете рисовать?
+          Не беда!</h1>
+        <p class="header__text">С помощью нашего приложения вы можете чиркануть каляку и получить шедевр.</p>
+        <button class="header__button">Подробнее</button>
+        <img class="header__image" src="./images/kalyaki.png" alt="Каляки">
+    </header>
+    <main>
+      <section class="cards">
+        <div class="card card__previous card_active">
+          <h2 class="card__name">AI</h2>
+          <h3 class="card__title">Умный интелект приложения</h3>
+          <p class="card__text">С помощью AI приложение анализирует картины мастеров и современных практиков рисования,
+            и достраивает картину за вас.</p>
+        </div>
+        <div class="card card__next">
+          <h2 class="card__name">Ч/Б и Цвет</h2>
+          <h3 class="card__title">Рисуйте в любом стиле</h3>
+          <p class="card__text">Будь то карандашная каляка-маляка или цветное произведение, приложение поможет в любой ситуации.</p>
+        </div>
+        <div class="cards__buttons">
+          <button type="button" class="cards__button_left cards__button_active" aria-label="Следующий"></button>
+          <button type="button" class="cards__button_right" aria-label="Предыдущий"></button>
+        </div>
+      </section>
+      <h2 class="title">Чик-чирик и ваша каляка превращается в изумительное произведение искусства.</h2>
+      <section class="phones">
+        <img class="phones__image phones__image_face phones__image_active" src="./images/face.svg" alt="Телефон">
+        <img class="phones__image phones__image_kindface" src="./images/kindface.svg" alt="Телефон">
+        <img class="phones__image phones__image_angryface" src="./images/angryface.svg" alt="Телефон">
+        <div class="phones__buttons">
+          <button type="button" class="phones__button_previous phones__button_active" aria-label="Первый"></button>
+          <button type="button" class="phones__button_middle" aria-label="Второй"></button>
+          <button type="button" class="phones__button_next" aria-label="Третий"></button>
+        </div>
+      </section>
+      <section class="cards">
+        <div class="card card__previous card_active">
+          <h2 class="card__name">Быстро</h2>
+          <h3 class="card__title">Проблем с рисованием — нет</h3>
+          <p class="card__text">Рисуйте в приложении доступными кистями: карандаш, маркер, линер, масляная
+            кисть и многие другие...</p>
+        </div>
+        <div class="card card__next">
+          <h2 class="card__name">Просто</h2>
+          <h3 class="card__title card__title_mini">Нарисовали, преобразовали, сохранили</h3>
+          <p class="card__text">Раз, два, три, больше нечего тут рассказать.</p>
+        </div>
+        <div class="cards__buttons">
+          <button type="button" class="cards__button_left cards__button_active" aria-label="Следующий"></button>
+          <button type="button" class="cards__button_right" aria-label="Предыдущий"></button>
+        </div>
+      </section>
+      <h2 class="title">Качайте приложение и улучшайте свои художества, а потом хвастайтесь ими!</h2>
+      <section class="form">
+        <h2 class="form__title">Хотите нам что-то посоветовать?</h2>
+        <p class="form__text">Оставьте заявку и мы свяжемся с вами.</p>
+        <div class="form__inputs">
+          <input class="form__input_name" type="text" name="name" placeholder="Ваше Имя" value="">
+          <input class="form__input_email" type="text" name="Email" placeholder="Контактный Email" value="">
+          <input class="form__input_text" type="text" name="text" placeholder="Сообщение" value="">
+        </div>
+        <button class="form__button">Оставить заявку</button>
+      </section>
+    </main>
+    <footer class="footer">
+        <h2 class="footer__title">Хотите скачать приложение?</h2>
+        <p class="footer__text">Качайте в ЭпСтор и ГуглПлэй.</p>
+        <button class="footer__button">Уже скоро!</button>
+        <img class="footer__image" src="./images/like.svg" alt="Лайк">
+    </footer>
+  </div>
+<script src="./index.js"></script>
+</body>
+</html>
+
+

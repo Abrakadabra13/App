@@ -1,0 +1,110 @@
+@mixin footer-header () {
+  box-sizing: border-box;
+  max-width: $max-width;
+  width: 100%;
+  background-color: $bg-black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin card () {
+  width: 540px;
+  height: 308px;
+  background-color: $card-color;
+  border-radius: 20px;
+}
+
+@mixin flex () {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin title () {
+  margin: $margin;
+  font-family: $font-family;
+  color: $bg-color;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 69px;
+}
+
+@mixin button () {
+  border-radius: 8px;
+  border: none;
+  padding: 0;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin large () {
+  @media (min-width: 767px) and (max-width: 1220px) {
+    @content;
+  }
+}
+
+@mixin tablet_and_mobile () {
+  @media (min-width: 320px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin small () {
+  @media (min-width: 320px) and (max-width: 766px) {
+    @content;
+  }
+}
+
+@mixin mobile () {
+  @media (min-width: 320px) and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet () {
+  @media (min-width: 601px) and (max-width: 766px) {
+    @content;
+  }
+}
+
+@mixin webkit () {
+  ::-webkit-input-placeholder {color:#111111; opacity: 30%};
+  ::-moz-placeholder {color:#111111; opacity: 30%};
+  :-moz-placeholder {color:#111111; opacity: 30%};
+  :-ms-input-placeholder {color:#111111; opacity: 30%};
+}
+
+@mixin fontkit () {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+
+  text-rendering: optimizeLegibility;
+}
+
+@mixin phonebuttons () {
+  width: 4px;
+  height: 4px;
+  padding: $null;
+  margin: $null;
+  border: $none;
+  background-image: url("../../images/gray.svg");
+  cursor: pointer;
+}
+
+@mixin phone () {
+  width: 320px;
+  height: 560px;
+}
+
+@mixin normalfont () {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}

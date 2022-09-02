@@ -1,0 +1,24 @@
+.title {
+  @include title ();
+  color: $bg-black;
+  padding-left: 170px;
+  padding-right: 167px;
+  padding-bottom: 120px;
+
+  @include large () {
+    font-size: 30px;
+    line-height: 37px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 70px;
+    width: 600px;
+  }
+
+  @include small () {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 70px;
+    font-size: 26px;
+    line-height: 31.5px;
+  }
+}

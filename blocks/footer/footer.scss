@@ -1,0 +1,107 @@
+.footer {
+  @include footer-header ();
+  margin-top: 120px;
+  height: 470px;
+  padding-top: 60px;
+  padding-left: 160px;
+
+  @include large () {
+    padding: $null;
+    margin-top: 70px;
+    height: 400px;
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+
+  @include small () {
+    margin: $null;
+    padding: 20px;
+    height: 266px;
+    margin-top: 70px;
+    align-items: center;
+  }
+
+  &__title {
+    color: $bg-color;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    width: 460px;
+    padding-bottom: 20px;
+    margin: $null;
+    font-family: $font-family;
+
+    @include small () {
+      font-size: 24px;
+      line-height: 29px;
+      width: 260px;
+    }
+  }
+
+  &__text {
+    margin: $null;
+    color: $bg-color;
+    opacity: 70%;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    padding-bottom: 174px;
+
+    @include large () {
+      padding-bottom: 130px;
+    }
+
+    @include small () {
+      font-size: 12px;
+      line-height: 14.5px;
+      padding-bottom: 95px;
+      width: 260px;
+    }
+  }
+
+  &__button {
+    @include button ();
+    min-height: 54px;
+    background-color: $bg-color;
+    width: 470px;
+
+    @include large () {
+      width: 240px;
+      min-height: 48px;
+    }
+
+    @include small () {
+      width: 260px;
+      min-height: 44px;
+      font-size: 12px;
+      line-height: 24px;
+    }
+
+    &:hover {
+      opacity: 93%;
+      cursor: pointer;
+    }
+}
+
+  &__image {
+    width: 471px;
+    height: 764px;
+    position: relative;
+    bottom: 526px;
+    left: 647px;
+
+    @include large () {
+      width: 377px;
+      min-height: 530px;
+      bottom: 480px;
+      left: 320px;
+    }
+
+    @include small () {
+      display: $none;
+    }
+  }
+
+}
