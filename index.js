@@ -21,24 +21,19 @@ text.addEventListener('click', function() {
   text.placeholder = '';
 });
 
-function clickCard() {
-  document.querySelectorAll('.card__previous').forEach(item => {
-    item.classList.toggle('card_active');})
-  document.querySelectorAll('.card__next').forEach(item => {
-    item.classList.toggle('card_active');})
-  document.querySelectorAll('.cards__button_left').forEach(item => {
-    item.classList.toggle('cards__button_active');})
-  document.querySelectorAll('.cards__button_right').forEach(item => {
-    item.classList.toggle('cards__button_active');})
+
+function clickCard(item) {
+  item.querySelector('.card__previous').classList.toggle('card_active');
+  item.querySelector('.card__next').classList.toggle('card_active');
+  item.querySelector('.cards__button_left').classList.toggle('cards__button_active');
+  item.querySelector('.cards__button_right').classList.toggle('cards__button_active');
 };
 
-document.querySelectorAll('.card').forEach(item => {
-  item.addEventListener('click', event => {
-    clickCard()
-  })
-  });
-
-
+document.querySelectorAll('.cards').forEach((item) =>
+  item.addEventListener('click', function() {
+  clickCard(item);
+  }
+));
 
 imgFace.addEventListener('click', function () {
   imgFace.classList.remove('phones__image_active');
