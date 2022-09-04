@@ -35,6 +35,18 @@ document.querySelectorAll('.cards').forEach((item) =>
   }
 ));
 
+document.querySelectorAll('.cards__button_left').forEach((item) =>
+  item.addEventListener('click', function() {
+  clickCard(item);
+  }
+));
+
+document.querySelectorAll('.cards__button_right').forEach((item) =>
+  item.addEventListener('click', function() {
+  clickCard(item);
+  }
+));
+
 imgFace.addEventListener('click', function () {
   imgFace.classList.remove('phones__image_active');
   imgKind.classList.add('phones__image_active');
