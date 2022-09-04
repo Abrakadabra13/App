@@ -49,27 +49,14 @@
   }
 
   &__button_left {
-    width: 4px;
-    height: 4px;
-    padding: $null;
-    margin: $null;
-    border: $none;
-    background-image: url("../../images/gray.svg");
-    cursor: pointer;
+    @include phonebuttons ();
   }
 
   &__button_right {
-    width: 4px;
-    height: 4px;
-    padding: $null;
-    margin: $null;
-    border: $none;
-    background-image: url("../../images/gray.svg");
-    cursor: pointer;
+    @include phonebuttons ();
   }
 
   &__button_active {
-
-    background-image: url("../../images/black.svg");
+    background-color: black;
   }
 }
