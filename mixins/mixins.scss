@@ -88,16 +88,6 @@
   text-rendering: optimizeLegibility;
 }
 
-// @mixin phonebuttons () {
-//   width: 4px;
-//   height: 4px;
-//   padding: $null;
-//   margin: $null;
-//   border: $none;
-//   background-image: url("images/gray.svg");
-//   cursor: pointer;
-// }
-
 @mixin phonebuttons () {
   width: 4px;
   height: 4px;

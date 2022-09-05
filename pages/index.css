@@ -607,7 +607,8 @@ template {
   padding: 0;
   margin: 0;
   border: none;
-  background-image: url("../../images/gray.svg");
+  border-radius: 50%;
+  background-color: #D9D9D9;
   cursor: pointer;
 }
 .cards__button_right {
@@ -616,11 +617,12 @@ template {
   padding: 0;
   margin: 0;
   border: none;
-  background-image: url("../../images/gray.svg");
+  border-radius: 50%;
+  background-color: #D9D9D9;
   cursor: pointer;
 }
 .cards__button_active {
-  background-image: url("../../images/black.svg");
+  background-color: black;
 }
 
 .card {
@@ -857,7 +859,8 @@ template {
   padding: 0;
   margin: 0;
   border: none;
-  background-image: url("../../images/gray.svg");
+  border-radius: 50%;
+  background-color: #D9D9D9;
   cursor: pointer;
 }
 .phones__button_middle {
@@ -866,7 +869,8 @@ template {
   padding: 0;
   margin: 0;
   border: none;
-  background-image: url("../../images/gray.svg");
+  border-radius: 50%;
+  background-color: #D9D9D9;
   cursor: pointer;
 }
 .phones__button_next {
@@ -875,11 +879,12 @@ template {
   padding: 0;
   margin: 0;
   border: none;
-  background-image: url("../../images/gray.svg");
+  border-radius: 50%;
+  background-color: #D9D9D9;
   cursor: pointer;
 }
 .phones__button_active {
-  background-image: url("../../images/black.svg");
+  background-color: black;
 }
 
 .form {
