@@ -310,49 +310,49 @@ template {
 
 @font-face {
   font-family: "Inter";
-  src: url("../vendor/fonts/Inter-Regular.woff2") format("woff2"), url("../vendor/fonts/Inter-Regular.woff") format("woff");
+  src: url("../../vendor/fonts/Inter-Regular.woff2") format("woff2"), url("../../vendor/fonts/Inter-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/vendor/fonts/Inter-Regular.woff2") format("woff2"), url("/vendor/fonts/Inter-Medium.woff") format("woff");
+  src: url("../../vendor/fonts/Inter-Regular.woff2") format("woff2"), url("../../vendor/fonts/Inter-Medium.woff") format("woff");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/vendor/fonts/Inter-SemiBold.woff2") format("woff2"), url("/vendor/fonts/Inter-SemiBold.woff") format("woff");
+  src: url("../../vendor/fonts/Inter-SemiBold.woff2") format("woff2"), url("../../vendor/fonts/Inter-SemiBold.woff") format("woff");
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/vendor/fonts/Inter-Bold.woff2") format("woff2"), url("/vendor/fonts/Inter-Bold.woff") format("woff");
+  src: url("../../vendor/fonts/Inter-Bold.woff2") format("woff2"), url("../../vendor/fonts/Inter-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
   font-family: "Inter";
-  src: url("../vendor/fonts/Inter-Regular.woff2") format("woff2"), url("../vendor/fonts/Inter-Regular.woff") format("woff");
+  src: url("../../vendor/fonts/Inter-Regular.woff2") format("woff2"), url("../../vendor/fonts/Inter-Regular.woff") format("woff");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/vendor/fonts/Inter-Regular.woff2") format("woff2"), url("/vendor/fonts/Inter-Medium.woff") format("woff");
+  src: url("../../vendor/fonts/Inter-Regular.woff2") format("woff2"), url("../../vendor/fonts/Inter-Medium.woff") format("woff");
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/vendor/fonts/Inter-SemiBold.woff2") format("woff2"), url("/vendor/fonts/Inter-SemiBold.woff") format("woff");
+  src: url("../../vendor/fonts/Inter-SemiBold.woff2") format("woff2"), url("../../vendor/fonts/Inter-SemiBold.woff") format("woff");
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
   font-family: "Inter";
-  src: url("/vendor/fonts/Inter-Bold.woff2") format("woff2"), url("/vendor/fonts/Inter-Bold.woff") format("woff");
+  src: url("../../vendor/fonts/Inter-Bold.woff2") format("woff2"), url("../../vendor/fonts/Inter-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
@@ -363,6 +363,7 @@ template {
   width: 100%;
   padding: 10px;
   background-color: #FFFFFF;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -385,25 +386,19 @@ template {
   flex-direction: column;
   padding-top: 30px;
   padding-left: 160px;
-  height: 640px;
   margin-bottom: 60px;
 }
 @media (min-width: 767px) and (max-width: 1220px) {
   .header {
     padding-left: 50px;
     margin-bottom: 70px;
-    height: 602px;
   }
 }
 @media (min-width: 320px) and (max-width: 766px) {
   .header {
-    height: 898px;
     padding-top: 20px;
-    margin-bottom: 70px;
-    min-width: 300px;
-    display: grid;
-    justify-content: center;
-    grid-template-areas: "logo" "title" "text" "img" "button";
+    padding-right: 20px;
+    padding-left: 30px;
   }
 }
 .header__logo {
@@ -426,6 +421,20 @@ template {
   width: 30.74px;
   height: 31.66px;
 }
+
+@media (min-width: 320px) and (max-width: 766px) {
+  .header__container {
+    margin-bottom: -155px;
+      min-width: 300px;
+      display: grid;
+      grid-template-areas:
+      "title"
+      "text"
+      "img"
+      "button";
+  }
+}
+
 .header__title {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
@@ -438,12 +447,18 @@ template {
   padding-bottom: 28px;
   grid-area: title;
 }
+
+@media (max-width: 1220px) {
+  .header__title {
+    padding-top: 50px;
+  }
+}
+
 @media (min-width: 767px) and (max-width: 1220px) {
   .header__title {
     font-size: 30px;
     line-height: 37px;
     width: 360px;
-    padding-top: 50px;
     padding-bottom: 20px;
   }
 }
@@ -452,7 +467,6 @@ template {
     font-size: 24px;
     line-height: 29px;
     width: 260px;
-    padding-top: 50px;
     padding-bottom: 14px;
     margin-left: -10px;
   }
@@ -492,17 +506,19 @@ template {
 .header__image {
   width: 471px;
   height: 764px;
-  position: relative;
-  bottom: 517px;
-  left: 650px;
+  position: absolute;
+  left: 840px;
+  top: 0;
+
+
   grid-area: img;
 }
 @media (min-width: 767px) and (max-width: 1220px) {
   .header__image {
     width: 377px;
     height: 611px;
-    bottom: 475px;
-    left: 340px;
+    left: 400px;
+    top: 90px;
   }
 }
 @media (min-width: 320px) and (max-width: 766px) {
@@ -511,6 +527,7 @@ template {
     height: 620px;
     top: -40px;
     left: -80px;
+    position: relative;
   }
 }
 .header__button {
@@ -525,6 +542,7 @@ template {
   width: 240px;
   grid-area: button;
   min-height: 54px;
+  margin-bottom: 130px;
 }
 .header__button:hover {
   opacity: 93%;
@@ -534,6 +552,7 @@ template {
   .header__button {
     min-height: 48px;
     font-size: 14px;
+    margin-bottom: 50px;
   }
 }
 @media (min-width: 320px) and (max-width: 766px) {
@@ -557,18 +576,23 @@ template {
   box-sizing: border-box;
   align-items: center;
 }
+
+@media (min-width: 601px) and (max-width: 1220px) {
+  .cards {
+    padding-bottom: 70px;
+  }
+}
+
 @media (min-width: 767px) and (max-width: 1220px) {
   .cards {
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 70px;
     gap: 10px;
   }
 }
 @media (min-width: 601px) and (max-width: 766px) {
   .cards {
     padding: 0;
-    padding-bottom: 70px;
     flex-direction: column;
   }
 }
@@ -586,12 +610,7 @@ template {
   margin-top: -10px;
   display: none;
 }
-@media (min-width: 767px) and (max-width: 1220px) {
-  .cards__buttons {
-    display: none;
-  }
-}
-@media (min-width: 601px) and (max-width: 766px) {
+@media (min-width: 601px) and (max-width: 1220px) {
   .cards__buttons {
     display: none;
   }
@@ -627,7 +646,6 @@ template {
 
 .card {
   width: 540px;
-  height: 308px;
   background-color: #F8F8F8;
   border-radius: 20px;
   padding: 40px;
@@ -636,14 +654,12 @@ template {
 @media (min-width: 767px) and (max-width: 1220px) {
   .card {
     width: 349px;
-    height: 284px;
     padding: 30px;
   }
 }
 @media (min-width: 320px) and (max-width: 766px) {
   .card {
     width: 300px;
-    height: 284px;
     padding: 20px;
   }
 }
@@ -745,6 +761,7 @@ template {
     padding-bottom: 70px;
     font-size: 26px;
     line-height: 31.5px;
+    font-weight: 600;
   }
 }
 
@@ -781,23 +798,18 @@ template {
 @media (min-width: 320px) and (max-width: 600px) {
   .phones {
     grid-template-columns: 1fr;
-    margin-top: -55px;
-    margin-left: -120px;
+    margin-top: -85px;;
+    margin-left: -140px;
     justify-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
+    margin-bottom: -23px;
   }
 }
 .phones__image {
   width: 510px;
   height: 870px;
 }
-@media (min-width: 767px) and (max-width: 1220px) {
-  .phones__image {
-    width: 320px;
-    height: 560px;
-  }
-}
-@media (min-width: 601px) and (max-width: 766px) {
+@media (min-width: 601px) and (max-width: 1220px) {
   .phones__image {
     width: 320px;
     height: 560px;
@@ -805,8 +817,8 @@ template {
 }
 @media (min-width: 320px) and (max-width: 600px) {
   .phones__image {
-    width: 330px;
-    height: 580px;
+    width: 400px;
+    height: 750px;
   }
 }
 @media (min-width: 320px) and (max-width: 600px) {
@@ -837,12 +849,7 @@ template {
   margin-top: -10px;
   display: none;
 }
-@media (min-width: 767px) and (max-width: 1220px) {
-  .phones__buttons {
-    display: none;
-  }
-}
-@media (min-width: 601px) and (max-width: 766px) {
+@media (min-width: 601px) and (max-width: 1220px) {
   .phones__buttons {
     display: none;
   }
@@ -850,7 +857,7 @@ template {
 @media (min-width: 320px) and (max-width: 600px) {
   .phones__buttons {
     display: block;
-    margin-top: -80px;
+    margin-top: -115px;;
   }
 }
 .phones__button_previous {
@@ -923,6 +930,7 @@ template {
 @media (min-width: 320px) and (max-width: 766px) {
   .form {
     margin: 0;
+    margin-bottom: 70px;
   }
 }
 .form__title {
@@ -936,10 +944,14 @@ template {
   font-size: 32px;
   line-height: 38px;
 }
+@media (min-width: 320px) and (max-width: 1220px) {
+  .form__title {
+    line-height: 31.5px;
+  }
+}
 @media (min-width: 767px) and (max-width: 1220px) {
   .form__title {
     font-size: 26px;
-    line-height: 31.5px;
     padding-top: 30px;
     padding-bottom: 24px;
   }
@@ -947,7 +959,6 @@ template {
 @media (min-width: 320px) and (max-width: 766px) {
   .form__title {
     font-size: 26px;
-    line-height: 31.5px;
     padding-top: 20px;
     padding-bottom: 20px;
     width: 260px;
@@ -964,15 +975,18 @@ template {
   margin: 0 auto;
   padding-bottom: 100px;
 }
-@media (min-width: 767px) and (max-width: 1220px) {
+@media (min-width: 320px) and (max-width: 1220px) {
   .form__text {
     font-size: 15px;
+  }
+}
+@media (min-width: 767px) and (max-width: 1220px) {
+  .form__text {
     line-height: 20px;
   }
 }
 @media (min-width: 320px) and (max-width: 766px) {
   .form__text {
-    font-size: 15px;
     line-height: 20px;
     padding-bottom: 80px;
     width: 260px;
@@ -985,20 +999,22 @@ template {
   gap: 20px 40px;
   padding-bottom: 10px;
 }
+@media (min-width: 320px) and (max-width: 1220px) {
+  .form__inputs {
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+}
 @media (min-width: 767px) and (max-width: 1220px) {
   .form__inputs {
     max-width: 470px;
     grid-template-areas: "name" "email" "text" "button";
-    gap: 20px;
-    padding-bottom: 30px;
   }
 }
 @media (min-width: 320px) and (max-width: 766px) {
   .form__inputs {
     max-width: 260px;
     grid-template-areas: "name" "email" "text" "button";
-    gap: 20px;
-    padding-bottom: 30px;
   }
 }
 .form__input_name {
@@ -1087,6 +1103,11 @@ template {
   opacity: 85%;
   cursor: pointer;
 }
+@media (min-width: 320px) and (max-width: 1220px) {
+  .form__button {
+    font-size: 12px;
+  }
+}
 @media (min-width: 767px) and (max-width: 1220px) {
   .form__button {
     width: 470px;
@@ -1099,7 +1120,6 @@ template {
     width: 260px;
     min-height: 44px;
     left: 0;
-    font-size: 12px;
   }
 }
 
@@ -1116,10 +1136,14 @@ template {
   padding-top: 60px;
   padding-left: 160px;
 }
+@media (min-width: 320px) and (max-width: 1220px) {
+  .footer {
+    margin-top: 70px;
+  }
+}
 @media (min-width: 767px) and (max-width: 1220px) {
   .footer {
     padding: 0;
-    margin-top: 70px;
     height: 400px;
     padding-top: 50px;
     padding-left: 50px;
@@ -1130,7 +1154,6 @@ template {
     margin: 0;
     padding: 20px;
     height: 266px;
-    margin-top: 70px;
     align-items: center;
   }
 }

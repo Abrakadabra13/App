@@ -28,10 +28,11 @@
 
   @include mobile () {
     grid-template-columns: 1fr;
-    margin-top: -55px;
-    margin-left: -120px;
+    margin-top: -85px;;
+    margin-left: -140px;
     justify-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
+    margin-bottom: -23px;
   }
 
   &__image {
@@ -47,8 +48,8 @@
     }
 
     @include mobile () {
-      width: 330px;
-      height: 580px;
+      width: 400px;
+      height: 750px;
     }
   }
 
@@ -94,7 +95,7 @@
 
     @include mobile () {
       display: block;
-      margin-top: -80px;
+      margin-top: -115px;;
     }
   }
 

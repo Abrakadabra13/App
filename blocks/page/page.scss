@@ -4,6 +4,7 @@
   max-width: $max-width;
   width: $width;
   padding: $padding;
+  overflow-x: hidden;
   background-color: $bg-color;
   @include flex ();
   font-family: $font-family;

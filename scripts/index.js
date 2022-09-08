@@ -7,7 +7,15 @@ const imgAngry = document.querySelector('.phones__image_angryface');
 const buttonFirst = document.querySelector('.phones__button_previous');
 const buttonSecond = document.querySelector('.phones__button_middle');
 const buttonThird = document.querySelector('.phones__button_next');
+const formButton = document.querySelector('.form__button');
 
+formButton.addEventListener('submit', function(evt) {
+  evt.preventDefault();
+  email.value = '';
+  inputName.value = '';
+  text.value = '';
+  console.log('sdfsdgs');
+});
 
 email.addEventListener('click', function() {
   email.placeholder = '';

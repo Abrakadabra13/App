@@ -10,7 +10,6 @@
 
 @mixin card () {
   width: 540px;
-  height: 308px;
   background-color: $card-color;
   border-radius: 20px;
 }
@@ -47,7 +46,7 @@
 }
 
 @mixin tablet_and_mobile () {
-  @media (min-width: 320px) and (max-width: 1200px) {
+  @media (min-width: 320px) and (max-width: 1220px) {
     @content;
   }
 }
